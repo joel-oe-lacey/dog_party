@@ -4,59 +4,68 @@
   <head>
     <title>Dogs eh?</title>
     <link href="styles.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="header_nav">
       <nav>
         <img src="images/dog-icon.svg" alt="Dog icon" />
-          <a href="https://www.dogs.com/facts-from-dog">Facts From Dog</a>
-          <a href="https://www.dogs.com/what-is-dog">What Is Dogs</a>
-          <a href="https://www.dogs.com/how-to-dog">How To Dog</a>
+          <a id="facts_tooltip" href="#facts_from_header">Facts From Dog</a>
+          <a id="what_tooltip" href="#what_is_header">What Is Dogs</a>
+          <a id="how_tooltip" href="#how_to_header">How To Dog</a>
       </nav>
     </div>
     <div class="landing">
-      <p id="landing_header">A Site About <strong>Some Dogs</strong></p>
-      <img id="landing_dog" src="images/dog1-sq.jpg" alt="Confused dog" />
-      <form>
-        <p id="form_text">Name</p>
-        <input id="nameBox" type="text" name="dogName" />
-        <button id="nameSubmit">
-          <input type="submit" name="nameSubmit" value="Name This Dog" />
-        </button>
-      </form>
+      <section class="landing_content">
+        <p id="landing_header">A Site About <span id="landing_dog_name">Some Dogs</span></p>
+        <img id="landing_dog" src="images/dog1-sq.jpg" alt="Confused dog" />
+        <form>
+          <label for="user_name_input">Name</label>
+          <input id="user_name_input" type="text" name="dogName" />
+          <button id="user_name_submit" type="button">Name This Dog</button>
+        </form>
+      </section>
     </div>
     <div class="center_content">
-    <section class="how_to">
-      <h2>How To Dog</h2>
-      <img src="images/dog2-sq.jpg" alt="Informative Dog" />
-      <p>Dat tungg tho pupperino length boy. borkdrive aqua doggo. Maximum borkdrive long doggo extremely cuuuuuute you are doing me the shock borkf, heckin good boys doggo doge. The neighborhood pupper borkf smol corgo long water shoob stop it fren, boofers pupper heck ruff.</p>
-      <button>
-        <a href="https://www.dogs.com/how-to-dog">How</a>
-      </button>
-    </section>
-    <section class="what_is">
-      <h2>What Is Dogs</h2>
-      <img src="images/dog3-sq.jpg" alt="Questioning Dog" />
-      <p>Long doggo smol borking doggo with a long snoot for pats pupperino h*ck heckin angery woofer shoober aqua doggo heck, doggo aqua doggo most angery pupper I have ever seen heckin angery woofer pupper. ruff adorable doggo very hand that feed shibe. Extremely cuuuuuute corgo waggy wags stop it fren.</p>
-      <button>
-        <a href="https://www.dogs.com/what-is-dog">What</a>
-      </button>
-    </section>
-    <section class="facts_from">
-      <h2>Facts From Dog</h2>
-      <img src="images/dog4-sq.jpg" alt="Knowledgeable Dog" />
-      <p>Most angery pupper I have ever seen such treat heck, dat tungg tho. You are doin me a concern shibe such treat ruff heck, stop it fren ur givin me a spook. Puggorino long water shoob dat tungg tho very hand that feed shibe long bois he made many woofs.</p>
-      <button>
-        <a href="https://www.dogs.com/facts-from-dog">Facts</a>
-      </button>
-    </section>
+      <section class="how_to">
+        <h2 id="how_to_header">How To Dog</h2>
+        <img src="images/dog2-sq.jpg" alt="Informative Dog" />
+        <p id="how_to_text">Dat tungg tho pupperino length boy. borkdrive aqua doggo. Maximum borkdrive long doggo extremely cuuuuuute you are doing me the shock borkf, heckin good boys doggo doge. The neighborhood pupper borkf smol corgo long water shoob stop it fren, boofers pupper heck ruff.</p>
+        <button id="how_to_button">
+          <a href="https://www.dogs.com/how-to-dog">How</a>
+        </button>
+      </section>
+      <section class="what_is">
+        <h2 id="what_is_header">What Is Dogs</h2>
+        <img src="images/dog3-sq.jpg" alt="Questioning Dog" />
+        <p id="what_is_text">Long doggo smol borking doggo with a long snoot for pats pupperino h*ck heckin angery woofer shoober aqua doggo heck, doggo aqua doggo most angery pupper I have ever seen heckin angery woofer pupper. ruff adorable doggo very hand that feed shibe. Extremely cuuuuuute corgo waggy wags stop it fren.</p>
+        <button id="what_is_button">
+          <a href="https://www.dogs.com/what-is-dog">What</a>
+        </button>
+      </section>
+      <section class="facts_from">
+        <h2 id="facts_from_header">Facts From Dog</h2>
+        <img src="images/dog4-sq.jpg" alt="Knowledgeable Dog" />
+        <p id="facts_from_text">Most angery pupper I have ever seen such treat heck, dat tungg tho. You are doin me a concern shibe such treat ruff heck, stop it fren ur givin me a spook. Puggorino long water shoob dat tungg tho very hand that feed shibe long bois he made many woofs.</p>
+        <button id="facts_from_button">
+          <a href="https://www.dogs.com/facts-from-dog">Facts</a>
+        </button>
+      </section>
+      <form class="content_form">
+        <label for="para_change">Choose which paragraph you want to change:</label>
+        <select id="para_change" name="para_change">
+          <option value="how_to">How To Dog</option>
+          <option value="what_is">What Is Dogs</option>
+          <option value="facts_from">Facts From Dog</option>
+        </select>
+        <label for="user_para_input">Enter the text you want to add:</label>
+        <input id="user_para_input" type="text" />
+        <button id="user_para_submit" type="button">Change Paragraph</button>
+      </form>
     </div>
     <div class="footer_nav">
       <nav>
         <h3>Learn About Dogs Online</h3>
-        <!--i.footerNav to fix icon size, also i.headerNav-->
         <a href="https://www.twitter.com"><img src="images/twitter.svg" /></a>
         <a href="https://www.instagram.com"><img src="images/instagram.svg" /></a>
         <a href="https://www.facebook.com"><img src="images/facebook.svg" /></a>
@@ -64,4 +73,7 @@
       </nav>
     </div>
   </body>
+  <footer>
+      <script type="text/javascript" src="main.js"></script>
+  </footer>
 </html>
