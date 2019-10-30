@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Open Sans";
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar center_content"
+    "sidebar footer";
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 65vh 175vh 40vh;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.header_nav {
+  grid-area: sidebar;
+  background-color: #9A969D;
+}
+
+.header_nav nav {
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.header_nav {
+
+}
+
+.header_nav nav img {
+  height: 20vh;
+  width: 20vh;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.header_nav nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  margin-top: 40%;
+  margin-left: 10%;
+}
+
+.landing {
+  grid-area: header;
+  background-color: #3C3643;
+}
+
+.landing_content {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "left-img header"
+    "left-img form";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 90%;
+}
+
+#landing_header {
+  grid-area: header;
+  font-size: 2.5em;
+  color: white;
+}
+
+#landing_dog {
+  grid-area: left-img;
+  height: 55vh;
+  width: 55vh;
+  border-radius: 50%;
+  margin: 5% 5% 5% 20%;
+  border: solid 8px #9A969D;
+}
+
+.landing_content form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.landing_content form * {
+  height: 20%;
+  margin-top: 5%;
+}
+
+.landing_content form label {
+  color: white;
+  margin-top: 10%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.landing_content form button {
+  background-color: #9A969D;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 10%;
+  text-align: center;
+  border: none;
+  border-radius: 1%;
+}
+
+.center_content {
+  grid-area: center_content;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+}
+
+.center_content section img {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 50%;
+  border: solid 4px #9A969D;
+}
+
+.footer_nav {
+  grid-area: footer;
+  background-color: #3C3643;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer_nav nav {
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  width: 50px;
+}
+
+.footer_nav nav * {
+  margin: 20%;
+  color: white;
+
+}
+
+.content_form {
+  display: none;
+}
